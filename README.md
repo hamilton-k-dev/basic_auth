@@ -91,7 +91,11 @@ src/
 ├── package.json          # Dependencies
 ```
 
-1️⃣ Clone the Repository
+## Getting Started
+
+> [!NOTE]  
+> We are using **Next 15** with **React 19**, follow these steps:
+> 1️⃣ Clone the Repository
 
 ```sh
    git clone https://github.com/yourusername/basic-auth-nextjs.git
