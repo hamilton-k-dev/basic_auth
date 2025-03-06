@@ -99,6 +99,16 @@ src/
 
 ---
 
+## 🎨 UI Preview
+
+### ![Login Page](https://your-image-url.com/login-page.png)
+
+<img src="https://github.com/hamilton-k-dev/basic_auth/blob/main/image.png?raw=true" alt="Basic Auth Logo">
+
+### ![Registration Page](https://your-image-url.com/login-page.png)
+
+<img src="https://github.com/hamilton-k-dev/basic_auth/blob/main/image.png?raw=true" alt="Basic Auth Logo">
+
 ## Getting Started
 
 > [!NOTE]  
