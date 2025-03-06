@@ -114,7 +114,15 @@ Add the required database connection and authentication secrets.
 4️⃣ Set Up Prisma Database
 
 ```sh
-npm prisma migrate dev
+npx prisma init
+```
+
+```sh
+npx prisma generate
+```
+
+```sh
+npx prisma db push
 ```
 
 5️⃣ Start the Development Server
@@ -131,7 +139,7 @@ Your app will be running at [http://localhost:3000](http://localhost:3000).
 Install Dependencies
 
 ```sh
-pnpm install next-auth bcryptjs prisma @prisma/client zustand zod react-hook-form
+npm install next-auth bcryptjs prisma @prisma/client zustand zod react-hook-form
 ```
 
 Import Components in your app:
@@ -148,10 +156,10 @@ import { SessionProvider } from "next-auth/react";
 
 function MyApp({ Component, pageProps }) {
 return (
-<SessionProvider session={pageProps.session}>
-<Component {...pageProps} />
-</SessionProvider>
-);
+   <SessionProvider session={pageProps.session}>
+      <Component {...pageProps} />
+   </SessionProvider>
+   );
 }
 
 export default MyApp;
@@ -160,14 +168,43 @@ export default MyApp;
 Protect Pages using Middleware (middleware.ts)
 
 ```sh
-import { withAuth } from "next-auth/middleware";
+import authConfig from "./auth.config"
+import NextAuth from "next-auth"
+import { NextResponse } from "next/server";
 
-export default withAuth({
-pages: {
-signIn: "/auth/login",
-},
-});
-export const config = { matcher: ["/dashboard/:path*"] };
+import {
+    apiAuthPrefix,
+    authRoutes,
+    publicRoutes,
+} from "./routes";
+const { auth } = NextAuth(authConfig)
+export default auth(async function middleware(req) {
+    const { nextUrl } = req
+    const { pathname } = nextUrl
+    const isLoggedIn = !!req.auth;
+
+    const isPublicRoute = pathname === "/" || publicRoutes.includes(pathname);
+    const isAuthRoute = authRoutes.includes(pathname)
+    const isApiAuthRoute = nextUrl.pathname.startsWith(apiAuthPrefix);
+
+    if (isApiAuthRoute) {
+        return
+    }
+
+    if (!isPublicRoute && !isAuthRoute && !isLoggedIn) {
+        return NextResponse.redirect(new URL("/login", nextUrl));
+    }
+    if (isAuthRoute && isLoggedIn) {
+        return NextResponse.redirect(new URL("/app", nextUrl));
+    }
+})
+export const config = {
+    matcher: [
+        "/((?!.+\\.[\\w]+$|_next).*)",
+        "/",
+        "/(api|trpc)(.*)",
+    ],
+};
 ```
 
 🔐 Authentication Features
@@ -182,11 +219,3 @@ Built with ❤️ by [hamilton-k-dev](https://github.com/hamilton-k-dev). Contri
 
 💬 Feedback & Support
 If you have any issues, feel free to open an issue or reach out via [GitHub Discussions](https://github.com/hamilton-k-dev/basic-auth/discussions).
-
-```
-
-```
-
-```
-
-```
