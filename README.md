@@ -103,11 +103,11 @@ src/
 
 ### Registration Page
 
-![Registration Page](https://github.com/user-attachments/assets/dd476765-b9f6-48e0-9116-a47715df095b)
+![Registration Page](https://github.com/user-attachments/assets/02b5a7a4-b380-4bd1-b59a-c108ceeb9706)
 
 ### Login Page
 
-![Login Page](https://github.com/user-attachments/assets/fa9d2bef-8690-46dd-8806-28cd859bfb99)
+![Login Page](https://github.com/user-attachments/assets/c17654e6-8e17-43df-a45b-efe4507ea0f9)
 
 ## Getting Started
 
