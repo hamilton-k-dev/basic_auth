@@ -91,23 +91,26 @@ src/
 ├── package.json          # Dependencies
 ```
 
+---
+
 ## Getting Started
 
 > [!NOTE]  
 > We are using **Next 15** with **React 19**, follow these steps:
-> 1️⃣ Clone the Repository
+
+**1️⃣ Clone the Repository**
 
 ```sh
    git clone https://github.com/yourusername/basic-auth-nextjs.git
 ```
 
-2️⃣ Install Dependencies
+**2️⃣ Install Dependencies**
 
 ```sh
 npm install
 ```
 
-3️⃣ Set Up Environment Variables
+**3️⃣ Set Up Environment Variables**
 Copy the .env.example file and rename it to .env
 
 ```sh
@@ -115,7 +118,7 @@ cp .env.example .env
 ```
 
 Add the required database connection and authentication secrets.
-4️⃣ Set Up Prisma Database
+**4️⃣ Set Up Prisma Database**
 
 ```sh
 npx prisma init
@@ -129,7 +132,7 @@ npx prisma generate
 npx prisma db push
 ```
 
-5️⃣ Start the Development Server
+**5️⃣ Start the Development Server**
 
 ```sh
 npm run dev
@@ -157,16 +160,18 @@ Wrap Your App with Auth Provider
 
 ```sh
 import { SessionProvider } from "next-auth/react";
+import { auth } from "@/auth";
 
-function MyApp({ Component, pageProps }) {
+function AuthLayout({ Component, pageProps }) {
+   const session = await auth();
 return (
-   <SessionProvider session={pageProps.session}>
+   <SessionProvider session={session}>
       <Component {...pageProps} />
    </SessionProvider>
    );
 }
 
-export default MyApp;
+export default AuthLayout;
 ```
 
 Protect Pages using Middleware (middleware.ts)
