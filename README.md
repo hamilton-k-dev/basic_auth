@@ -103,11 +103,7 @@ src/
 
 ### ![Login Page](https://github.com/hamilton-k-dev/basic_auth/blob/main/image.png?raw=true)
 
-<img src="https://github.com/hamilton-k-dev/basic_auth/blob/main/image.png?raw=true" alt="Basic Auth Logo">
-
 ### ![Registration Page](https://github.com/hamilton-k-dev/basic_auth/blob/main/image.png?raw=true)
-
-<img src="https://github.com/hamilton-k-dev/basic_auth/blob/main/image.png?raw=true" alt="Basic Auth Logo">
 
 ## Getting Started
 
