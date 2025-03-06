@@ -207,13 +207,13 @@ export const config = {
 };
 ```
 
-## 🔐 Authentication Features
+## **🔐 Authentication Features :**
 
-✅ Session-based Authentication using Auth.js
-✅ Encrypted Passwords with bcryptjs
-✅ Client & Server-Side Validation using Zod
-✅ Middleware for Route Protection
-✅ Fully Typed with TypeScript
+✅ **Session-based Authentication using Auth.js**
+✅ **Encrypted Passwords with bcryptjs**
+✅ **Client & Server-Side Validation using Zod**
+✅ **Middleware for Route Protection**
+✅ **Fully Typed with TypeScript**
 
 ## 💡 Contributors
 
