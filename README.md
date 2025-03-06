@@ -57,10 +57,16 @@ src/
 │   │   │   ├── page.tsx
 │   │   │   ├── layout.tsx
 │
-│   ├── (dashboard)/     # Protected dashboard route
-│   │   ├── page.tsx
+│   ├── app/     # Protected app route
+│   │   ├── @admin/
+│   │   │   ├── page.tsx
+│   │   ├── @user/
+│   │   │   ├── page.tsx
 │
-│   ├── api/             # API routes
+│   ├── api/     # API routes
+│   │   ├── auth/ # AUTH routes
+│   │   │   ├── [...nextauth]/
+│   │   │   │   ├── route.ts
 │
 ├── components/           # Shared UI components
 │   ├── auth/            # Authentication components
