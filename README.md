@@ -101,13 +101,13 @@ src/
 
 ## 🎨 UI Preview
 
+### Registration Page
+
+![Registration Page](https://github.com/user-attachments/assets/dd476765-b9f6-48e0-9116-a47715df095b)
+
 ### Login Page
 
 ![Login Page](https://github.com/user-attachments/assets/fa9d2bef-8690-46dd-8806-28cd859bfb99)
-
-### Registration Page
-
-![Registration Page](https://github.com/user-attachments/assets/fa9d2bef-8690-46dd-8806-28cd859bfb99)
 
 ## Getting Started
 
