@@ -207,7 +207,7 @@ export const config = {
 };
 ```
 
-### 🔐 Authentication Features
+## 🔐 Authentication Features
 
 ✅ Session-based Authentication using Auth.js
 ✅ Encrypted Passwords with bcryptjs
@@ -215,16 +215,14 @@ export const config = {
 ✅ Middleware for Route Protection
 ✅ Fully Typed with TypeScript
 
-💡 Contributors
-Built with ❤️ by [hamilton-k-dev](https://github.com/hamilton-k-dev). Contributions welcome! 🚀
+## 💡 Contributors
 
-💬 Feedback & Support
+Built with ❤️ by [Hamilton KENFACK](https://github.com/hamilton-k-dev). Contributions welcome! 🚀
+
+## 💬 Feedback & Support
+
 If you have any issues, feel free to open an issue or reach out via [GitHub Discussions](https://github.com/hamilton-k-dev/basic-auth/discussions).
 
-```
+## 📜 License
 
-```
-
-```
-
-```
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/hamilton-k-dev/basic-auth/discussions) file for details.
