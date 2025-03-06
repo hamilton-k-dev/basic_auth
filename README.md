@@ -3,7 +3,7 @@
 **A lightweight authentication module built with Next.js 15, designed for easy integration into any project.**
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/9113740/201498152-b171abb8-9225-487a-821c-6ff49ee48579.png" alt="Basic Auth Logo">
+  <img src="/" alt="Basic Auth Logo">
 </p>
 
 ---
