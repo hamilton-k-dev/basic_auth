@@ -207,7 +207,8 @@ export const config = {
 };
 ```
 
-🔐 Authentication Features
+### 🔐 Authentication Features
+
 ✅ Session-based Authentication using Auth.js
 ✅ Encrypted Passwords with bcryptjs
 ✅ Client & Server-Side Validation using Zod
@@ -219,3 +220,11 @@ Built with ❤️ by [hamilton-k-dev](https://github.com/hamilton-k-dev). Contri
 
 💬 Feedback & Support
 If you have any issues, feel free to open an issue or reach out via [GitHub Discussions](https://github.com/hamilton-k-dev/basic-auth/discussions).
+
+```
+
+```
+
+```
+
+```
