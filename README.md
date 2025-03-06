@@ -118,6 +118,7 @@ cp .env.example .env
 ```
 
 Add the required database connection and authentication secrets.
+
 **4️⃣ Set Up Prisma Database**
 
 ```sh
@@ -219,9 +220,13 @@ export const config = {
 ## **🔐 Authentication Features :**
 
 ✅ **Session-based Authentication using Auth.js**
+
 ✅ **Encrypted Passwords with bcryptjs**
+
 ✅ **Client & Server-Side Validation using Zod**
+
 ✅ **Middleware for Route Protection**
+
 ✅ **Fully Typed with TypeScript**
 
 ## 💡 Contributors
