@@ -3,7 +3,7 @@
 **A lightweight authentication module built with Next.js 15, designed for easy integration into any project.**
 
 <p align="center">
-  <img src="https://github.com/hamilton-k-dev/basic_auth/blob/main/image.png?raw=true" alt="Basic Auth Logo">
+  <img src="https://github.com/user-attachments/assets/540787cb-c74c-4f4d-a023-efe077cd58bb" alt="Basic Auth Logo">
 </p>
 
 ---
@@ -101,9 +101,9 @@ src/
 
 ## 🎨 UI Preview
 
-### ![Login Page](https://github.com/hamilton-k-dev/basic_auth/blob/main/image.png?raw=true)
+### ![Login Page](https://github.com/user-attachments/assets/fa9d2bef-8690-46dd-8806-28cd859bfb99)
 
-### ![Registration Page](https://github.com/hamilton-k-dev/basic_auth/blob/main/image.png?raw=true)
+### ![Registration Page](https://github.com/user-attachments/assets/fa9d2bef-8690-46dd-8806-28cd859bfb99)
 
 ## Getting Started
 
