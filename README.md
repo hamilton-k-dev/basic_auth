@@ -122,10 +122,6 @@ Add the required database connection and authentication secrets.
 **4️⃣ Set Up Prisma Database**
 
 ```sh
-npx prisma init
-```
-
-```sh
 npx prisma generate
 ```
 
