@@ -1,4 +1,5 @@
 import NextAuth from "next-auth"
+import type { Adapter } from 'next-auth/adapters';
 
 
 import { PrismaAdapter } from "@auth/prisma-adapter"
@@ -43,7 +44,7 @@ export const {
             return token;
         },
     },
-    adapter: PrismaAdapter(db),
+    adapter: PrismaAdapter(db) as Adapter,
     session: { strategy: "jwt" },
     ...authConfig
 })
