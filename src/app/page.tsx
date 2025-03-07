@@ -7,7 +7,9 @@ export default function Home() {
       <h1 className="font-bold text-6xl text-white">
         Hello From Basic-Auth! 🔐
       </h1>
-      <p className="text-lg text-white">A basic authentication systeme</p>
+      <p className="text-lg text-white">
+        A lightweight authentication module built with Next.js 15
+      </p>
       <div className="mt-4 flex flex-row items-center gap-4">
         <Link href="/login">
           <Button size={"lg"} className="w-full" variant={"secondary"}>
