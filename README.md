@@ -6,6 +6,13 @@
   <img src="https://github.com/user-attachments/assets/540787cb-c74c-4f4d-a023-efe077cd58bb" alt="Basic Auth Logo">
 </p>
 
+## for demo purposes, use demo as password and as username, use admin to log in as administrator or user to log in as user
+
+<div align="center">
+<a href="https://basic-auth-puce.vercel.app/">View Demo</a>
+<span>
+</div>
+
 ---
 
 ## **🔹 Overview**
