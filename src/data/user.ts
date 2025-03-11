@@ -23,6 +23,6 @@ export const getUserByUsername = async (username: string) => {
         return user;
     } catch (error) {
         console.log("ERROR_ON_GETUSERBYUSERNAME :", error)
-        return { user: "" };
+        return null;
     }
 };

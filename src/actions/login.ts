@@ -5,15 +5,13 @@ import { LoginSchema } from "@/schemas";
 import { signIn } from "@/auth";
 import { AuthError } from "next-auth";
 import { getUserByUsername } from "@/data/user";
-import { isRedirectError } from "next/dist/client/components/redirect-error";
-import { redirect } from 'next/navigation'
 
 /**
  * Defines the expected return type for the `login` function.
  */
 type LoginResponse =
   | { success: string } // Indicates a successful login.
-  | { error: string | undefined | "INVALID_FIELDS" | "USER_NOT_FOUND" | "INVALID_CREDENTIALS" | "UNKNOWN_ERROR" | "Invalid credentials." | "Something went wrong." };
+  | { error: string | undefined | "INVALID_FIELDS" | "USER_NOT_FOUND" | "INVALID_CREDENTIALS" | "UNKNOWN_ERROR" };
 
 /**
  * Handles user authentication using credentials.
@@ -37,16 +35,11 @@ export const login = async (values: z.infer<typeof LoginSchema>): Promise<LoginR
 
   try {
     // Attempt to authenticate the user with credentials.
-    await signIn("credentials", { username, password, redirectTo: "/app" });
+    await signIn("credentials", { username, password });
     return { success: "LOGIN_SUCCESS" }; // Successful login.
   } catch (error) {
-
-    if (isRedirectError(error)) {
-      console.error("isRedirectError:", error);
-      redirect(`/app`)
-    }
-    else if (error instanceof AuthError) {
-      console.error("isAuthError:", error);
+    console.error("Login error:", error);
+    if (error instanceof AuthError) {
       switch (error.type) {
         case "CredentialsSignin":
           return { error: "INVALID_CREDENTIALS" }; // Incorrect username or password.
@@ -54,7 +47,7 @@ export const login = async (values: z.infer<typeof LoginSchema>): Promise<LoginR
           return { error: "UNKNOWN_ERROR" }; // Unexpected authentication error.
       }
     }
-    return { success: "UNKNOWN_ERROR" }
+
     throw error; // Re-throw any unexpected errors.
   }
 };

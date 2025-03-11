@@ -21,6 +21,7 @@ import Link from "next/link";
 import { FormError } from "../form-error";
 import { FormSuccess } from "../form-success";
 import { LoginSchema } from "@/schemas";
+import { isRedirectError } from "next/dist/client/components/redirect-error";
 
 /**
  * LoginForm Component
@@ -67,8 +68,10 @@ export const LoginForm = () => {
           }
         })
         .catch((err) => {
-          setError("An unexpected error occurred.");
-          console.error("Unexpected Login Error:", err);
+          if (!isRedirectError(err)) {
+            setError("An unexpected error occurred.");
+            console.error("Unexpected Login Error:", err);
+          }
         });
     });
   };
