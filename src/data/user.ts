@@ -1,19 +1,5 @@
 import { db } from "@/lib/db";
 
-export const getAccountByUserId = async (id: string) => {
-    try {
-        const user = await db.user.findUnique({
-            where: {
-                id,
-            },
-        });
-        return user;
-    } catch (error) {
-        console.log(error)
-        return null;
-    }
-};
-
 export const getUserById = async (id: string) => {
     try {
         const user = await db.user.findUnique({
@@ -23,7 +9,7 @@ export const getUserById = async (id: string) => {
         });
         return user;
     } catch (error) {
-        console.log(error)
+        console.log("ERROR_ON_GETUSERBYID :", error)
         return null;
     }
 };
@@ -36,7 +22,7 @@ export const getUserByUsername = async (username: string) => {
         });
         return user;
     } catch (error) {
-        console.log(error)
-        return null;
+        console.log("ERROR_ON_GETUSERBYUSERNAME :", error)
+        return { user: "" };
     }
 };
