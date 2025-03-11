@@ -5,13 +5,7 @@ import { LoginSchema } from "@/schemas";
 import { signIn } from "@/auth";
 import { AuthError } from "next-auth";
 import { getUserByUsername } from "@/data/user";
-
-/**
- * Defines the expected return type for the `login` function.
- */
-type LoginResponse =
-  | { success: string } // Indicates a successful login.
-  | { error: string | undefined | "INVALID_FIELDS" | "USER_NOT_FOUND" | "INVALID_CREDENTIALS" | "UNKNOWN_ERROR" };
+import { LoginResponse } from "@/types"; // Import the expected return type for the `login` function.
 
 /**
  * Handles user authentication using credentials.

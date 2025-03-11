@@ -6,13 +6,7 @@ import { RegistrationSchema } from "@/schemas";
 import { getUserByUsername } from "@/data/user";
 import { db } from "@/lib/db";
 import { UserRole } from "@prisma/client"; // ✅ Import the enum from Prisma
-
-/**
- * Defines the expected return type for the `register` function.
- */
-type RegisterResponse =
-    | { success: "ACCOUNT_CREATED" }
-    | { error: "INVALID_FIELDS" | "USERNAME_TAKEN" | "UNKNOWN_ERROR" };
+import { RegisterResponse } from "@/types"; //Import the expected return type for the `register` function.
 
 /**
  * Handles user registration.

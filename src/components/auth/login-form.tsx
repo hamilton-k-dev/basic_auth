@@ -36,7 +36,7 @@ export const LoginForm = () => {
   const [success, setSuccess] = useState<string | undefined>();
 
   // State for toggling password visibility
-  const [passwordVisible, setPasswordVisible] = useState(false);
+  const [passwordVisible, setPasswordVisible] = useState<boolean>(false);
 
   // Initialize the form with react-hook-form and zod validation
   const form = useForm<z.infer<typeof LoginSchema>>({
