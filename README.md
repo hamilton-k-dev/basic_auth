@@ -9,7 +9,7 @@
 **for demo purposes, use `demo` as password and as username, use `admin` to log in as administrator or `user` to log in as user**
 
 <div align="center">
-<a href="https://basic-auth-puce.vercel.app/">View Demo</a>
+<a target="_blank" href="https://basic-auth-puce.vercel.app/">View Demo</a>
 <span>
 </div>
 
