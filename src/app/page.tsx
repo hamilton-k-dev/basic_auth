@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-
 export default function Home() {
   return (
     <main className="w-full h-screen flex flex-col justify-center items-center bg-gradient-to-r from-emerald-500 to-emerald-900">
@@ -21,6 +20,11 @@ export default function Home() {
             Register
           </Button>
         </Link>
+      </div>
+
+      <div className="w-96 bg-white p-4 rounded-md text-center mt-6">
+        <h1 className="text-lg font-bold">Demo Credentials</h1>
+        username: user/admin <br /> password : demo
       </div>
     </main>
   );
