@@ -120,12 +120,7 @@ export const LoginForm = () => {
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel>
-                      <div className="flex justify-between items-center">
-                        <span>Password</span>
-                        <Link href="#" className="text-primary text-sm">
-                          Forgot password?
-                        </Link>
-                      </div>
+                      <div className="">Password</div>
                     </FormLabel>
                     <FormControl>
                       <div className="relative">
