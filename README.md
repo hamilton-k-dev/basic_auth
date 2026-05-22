@@ -124,7 +124,7 @@ src/
 **1️⃣ Clone the Repository**
 
 ```sh
-   git clone https://github.com/yourusername/basic-auth-nextjs.git
+   git clone https://github.com/hamilton-k-dev/basic-auth-nextjs.git
 ```
 
 **2️⃣ Install Dependencies**
